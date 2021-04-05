@@ -7,7 +7,7 @@ def main():
     regex_1 = r'[1-8]\d\.\d{1,3}\.\d{1,3}\.\d{2,3} - - \[(\d{2}\/\D{3}\/\d{4}):(\d{2}:\d{2}:\d{2}) ' \
               r'\+(0100|2000)] "GET .*?" 200 (.+)'
 
-    regex_2 = r'\[1-8]\d\.\d{1,3}\.\d{1,3}\.\d{2,3} - - \[(\d{2}\/\D{3}\/\d{4}):(\d{2}:\d{2}:\d{2}) ' \
+    regex_2 = r'[1-8]\d\.\d{1,3}\.\d{1,3}\.\d{2,3} - - \[(\d{2}\/\D{3}\/\d{4}):(\d{2}:\d{2}:\d{2}) ' \
               r'\+(0100|2000)] "POST .*?" 200 (.+)'
 
     with open(input_file, 'r') as file:
@@ -23,6 +23,8 @@ def main():
                 successful_call_counter_post += 1
         print(f'The number of successful GET: {successful_call_counter_get}')
         print(f'The number of successful POST: {successful_call_counter_post}')
+
+    file.close()
 
 
 if __name__ == '__main__':
