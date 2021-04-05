@@ -24,8 +24,6 @@ def main():
         print(f'The number of successful GET: {successful_call_counter_get}')
         print(f'The number of successful POST: {successful_call_counter_post}')
 
-    file.close()
-
 
 if __name__ == '__main__':
     main()
